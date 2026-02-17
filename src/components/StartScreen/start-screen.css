@@ -1,0 +1,48 @@
+.title {
+  font-family: 'Creepster', cursive;
+  font-size: clamp(4rem, 15vmin, 12rem);
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  line-height: 0.85;
+  margin: 0 0 4rem 0;
+  padding: 0;
+  transform: rotate(0deg);
+  text-shadow:
+    0 0 10px #74b9ff,
+    0 0 20px #74b9ff,
+    0 0 40px #0984e3;
+  animation: ghostFloat 3s ease-in-out infinite alternate;
+}
+
+@keyframes ghostFloat {
+  from {
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-20px) scale(1.05);
+    filter: blur(1px);
+    opacity: 0.9;
+  }
+}
+
+.title span {
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+
+.title span:nth-of-type(2) {
+  color: #a29bfe;
+  text-shadow: 0 0 10px #a29bfe;
+  transform: scale(0.8);
+  margin: 0 20px;
+}
+
+.title:hover span {
+  text-shadow: 0 0 50px #fff;
+  color: #dfe6e9;
+}

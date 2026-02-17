@@ -1,0 +1,25 @@
+.mallet {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate3d(calc(var(--x) * 1px), calc(var(--y) * 1px), 0);
+  /* The react component handles the rotation and centering offset via GSAP */
+  margin-top: -50px;
+  /* Offset to center the head roughly */
+  margin-left: -50px;
+}
+
+.shadow-hammer {
+  width: 25vmin;
+  height: 25vmin;
+  filter: drop-shadow(0 0 20px rgba(162, 155, 254, 0.4));
+  overflow: visible;
+}
+
+@media (hover: none) {
+  .mallet {
+    display: none !important;
+  }
+}
