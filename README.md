@@ -20,7 +20,7 @@ Welcome to the **Punch Game**, where reflex meets endurance. Your goal is simple
 1.  **Clone the Arena:**
     ```bash
     git clone https://github.com/naitik09090/punch_09.git
-    cd Punch-Game-master
+    cd punch_09
     ```
 
 2.  **Gear Up (Install Dependencies):**
