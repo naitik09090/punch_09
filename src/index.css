@@ -351,48 +351,55 @@ button:active {
   }
 
   .results {
-    padding: 2rem;
+    padding: 1rem;
     width: 100%;
   }
 
   .info-screen {
-    width: 90%;
-    /* Take up most of the screen width */
-    max-width: 600px;
+    width: 95%;
+    max-width: 500px;
+    gap: 1rem;
+    /* Reduce gap */
   }
 
   /* Adjust game board if needed for tablets */
   .moles {
-    gap: 15px;
-    padding: 20px;
+    gap: 10px;
+    padding: 10px;
   }
 }
 
 @media (max-width: 600px) {
   .celebration {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .info__text {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 
   .boring-text {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .results {
-    padding: 1.5rem;
+    padding: 0.8rem;
+  }
+
+  .info-screen {
+    width: 95%;
+    gap: 0.5rem;
+    /* Minimal gap */
   }
 
   button {
-    padding: 0.8rem 1.5rem;
-    /* Smaller buttons */
-    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin: 0.2rem;
+    /* Add margin for wrapping */
   }
 
   .moles {
-    transform: scale(0.8);
-    /* Scale down board for very small screens if necessary */
+    transform: scale(0.65);
   }
 }
