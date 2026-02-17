@@ -187,6 +187,10 @@ button:active {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  max-width: 90vw;
+  /* Ensure it doesn't overflow horizontally on small screens */
+  width: max-content;
+  /* Allow it to be as wide as needed but capped by max-width */
 }
 
 .results {
@@ -197,6 +201,8 @@ button:active {
   text-align: center;
   border: 1px solid var(--primary);
   animation: fadeIn 0.5s ease-out;
+  width: 100%;
+  /* Take full width of parent if constrained */
 }
 
 @keyframes fadeIn {
@@ -327,4 +333,66 @@ button:active {
   height: 24px;
   margin-right: 8px;
   fill: var(--text-main);
+}
+
+/* Tablet and Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .celebration {
+    font-size: 3rem;
+    /* Smaller title */
+  }
+
+  .info__text {
+    font-size: 1.5rem;
+  }
+
+  .boring-text {
+    font-size: 1.5rem;
+  }
+
+  .results {
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .info-screen {
+    width: 90%;
+    /* Take up most of the screen width */
+    max-width: 600px;
+  }
+
+  /* Adjust game board if needed for tablets */
+  .moles {
+    gap: 15px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .celebration {
+    font-size: 2rem;
+  }
+
+  .info__text {
+    font-size: 1.25rem;
+  }
+
+  .boring-text {
+    font-size: 1.25rem;
+  }
+
+  .results {
+    padding: 1.5rem;
+  }
+
+  button {
+    padding: 0.8rem 1.5rem;
+    /* Smaller buttons */
+    font-size: 1.2rem;
+  }
+
+  .moles {
+    transform: scale(0.8);
+    /* Scale down board for very small screens if necessary */
+  }
 }
